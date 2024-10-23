@@ -13,6 +13,7 @@ import { RouterLink } from '@angular/router';
 
 export class PokemonListComponent implements OnInit {
   pokemons: any[] = [];
+  searchTerm: string = '';
 
   constructor(private pokemonService: PokemonService) {}
 
