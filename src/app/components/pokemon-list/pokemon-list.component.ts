@@ -24,4 +24,14 @@ export class PokemonListComponent implements OnInit {
       }));
     });
   }  
+
+  // Fonction pour filtrer les Pokémon selon le terme de recherche
+  filteredPokemons() {
+    if (!this.searchTerm) {
+      return this.pokemons;
+    }
+    return this.pokemons.filter(pokemon =>
+      pokemon.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  }
 }
