@@ -1,0 +1,12 @@
+<div *ngIf="pokemons.length">
+    <h1>Liste des Pokémon</h1>
+    <ul>
+      <li *ngFor="let pokemon of pokemons">
+        {{ pokemon.name }}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!pokemons.length">
+    <p>Chargement en cours...</p>
+  </div>
+  
