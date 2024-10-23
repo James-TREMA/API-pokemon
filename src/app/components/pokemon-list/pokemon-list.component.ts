@@ -18,7 +18,10 @@ export class PokemonListComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemonService.getAllPokemon().subscribe((data: any[]) => {
-      this.pokemons = data;
+      this.pokemons = data.map(pokemon => ({
+        ...pokemon,
+        imageUrl: pokemon.image // Utilisation du champ "image" pour l'image principale
+      }));
     });
-  }
+  }  
 }
