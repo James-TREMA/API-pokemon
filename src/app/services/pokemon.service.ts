@@ -14,4 +14,9 @@ export class PokemonService {
   getAllPokemon(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
+
+  // Fonction pour récupérer un Pokémon par son ID
+  getPokemonById(id: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}`);
+  }
 }
