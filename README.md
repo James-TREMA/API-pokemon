@@ -44,5 +44,5 @@ Ce projet est une application Angular permettant de consulter et de visualiser d
 - **Génération du service API** : `ng generate service services/pokemon`
 - **Création des interfaces** : `ng generate interface interface/pokemon`
 
-## Vidéo de présentation
-<video controls src="20241025-0931-57.3418598.mp4" title="Présentation"></video>
+## Visuel vidéo
+[Voir la vidéo de présentation](src/assets/videos/VideoPresentation.mp4)
