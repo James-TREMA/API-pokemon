@@ -7,13 +7,15 @@
     <p class="loading-text">Chargement des Pokémon...</p>
   </div>
 
-  <!-- Barre de recherche -->
-  <input 
-    type="text" 
-    placeholder="Rechercher un Pokémon..." 
-    [(ngModel)]="searchTerm"
-    class="search-bar"
-  />
+    <!-- Barre de recherche -->
+  <ul *ngIf="!isLoading">
+    <input 
+      type="text" 
+      placeholder="Rechercher un Pokémon..." 
+      [(ngModel)]="searchTerm"
+      class="search-bar"
+    />
+  </ul>
 
   <!-- Liste des Pokémon -->
   <ul *ngIf="!isLoading" class="pokemon-list">
