@@ -45,4 +45,4 @@ Ce projet est une application Angular permettant de consulter et de visualiser d
 - **Création des interfaces** : `ng generate interface interface/pokemon`
 
 ## Visuel vidéo
-[Voir la vidéo de présentation](src/assets/videos/VideoPresentation.mp4)
+https://streamable.com/l0l2i7
