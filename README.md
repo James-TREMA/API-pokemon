@@ -43,3 +43,6 @@ Ce projet est une application Angular permettant de consulter et de visualiser d
   - Détails des Pokémon : `ng generate component components/pokemon-detail`
 - **Génération du service API** : `ng generate service services/pokemon`
 - **Création des interfaces** : `ng generate interface interface/pokemon`
+
+## Vidéo de présentation
+<video controls src="20241025-0931-57.3418598.mp4" title="Présentation"></video>
