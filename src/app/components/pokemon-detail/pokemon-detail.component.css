@@ -19,8 +19,15 @@
   display: block;
   margin: 20px auto;
   max-width: 300px;
-  border-radius: 50%; /* Donne une apparence arrondie */
+  border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d; /* Active la 3D pour cet élément */
+}
+
+.pokemon-image:hover {
+  transform: rotateY(20deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .section-title {
