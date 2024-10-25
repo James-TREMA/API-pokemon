@@ -1,27 +1,97 @@
-# APIPokemon
+# API Pokémon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+Ce projet est une application Angular permettant de consulter et de visualiser des informations détaillées sur les Pokémon, notamment leurs statistiques, types, résistances, et évolutions. Elle utilise l'[API PokeBuild](https://pokebuildapi.fr/) pour récupérer les données des Pokémon.
 
-## Development server
+## Fonctionnalités
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Affichage de la liste des Pokémon** : Une liste paginée et filtrable de Pokémon avec une recherche intégrée.
+- **Détails des Pokémon** : Consultation des statistiques, types, résistances, et évolutions d'un Pokémon.
+- **Animations et effets CSS** : Ajout de styles et d'effets 3D pour améliorer l'expérience utilisateur (UI/UX).
+- **Accessibilité** : Optimisation des composants pour une meilleure accessibilité et une meilleure expérience utilisateur.
 
-## Code scaffolding
+## Technologies Utilisées
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular** : Framework front-end pour construire l'application.
+- **TypeScript** : Langage utilisé pour structurer et typiser le code.
+- **API PokeBuild** : Source des données des Pokémon.
+- **CSS3** : Personnalisation du style pour un design amélioré et des effets visuels.
 
-## Build
+## Commandes et Étapes Utilisées pour Créer le Projet
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Création du projet Angular
 
-## Running unit tests
+Pour initialiser le projet Angular :
+```bash
+ng new API-pokemon
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Démarrage du Serveur de Développement
 
-## Running end-to-end tests
+Pour démarrer l'application en mode développement, utilisez :
+```bash
+ng serve
+```
+Naviguez ensuite vers `http://localhost:4200/` pour visualiser l'application. Toute modification dans les fichiers sources rechargera automatiquement l'application.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Génération des Composants, Services et Interfaces
 
-## Further help
+1. **Composant pour la Liste des Pokémon** :
+   ```bash
+   ng generate component components/pokemon-list
+   ```
+2. **Composant pour les Détails des Pokémon** :
+   ```bash
+   ng generate component components/pokemon-detail
+   ```
+3. **Service pour Gérer les Requêtes API** :
+   ```bash
+   ng generate service services/pokemon
+   ```
+4. **Interfaces pour Typage des Données** :
+   - Interface pour structurer les données des Pokémon :
+     ```bash
+     ng generate interface interface/pokemon
+     ```
+   - Interfaces additionnelles pour les statistiques, types, et résistances.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Construction du Projet
+
+Pour compiler le projet pour la production :
+```bash
+ng build
+```
+Les fichiers de construction seront stockés dans le répertoire `dist/`.
+
+## Structure des Composants et Fonctionnalités
+
+1. **PokemonListComponent** : Composant principal affichant la liste des Pokémon avec un champ de recherche et un indicateur de chargement.
+   - Affichage de chaque Pokémon avec un effet 3D sur l'image.
+   - Pagination pour charger les Pokémon par lots et réduire le temps de chargement initial.
+
+2. **PokemonDetailComponent** : Affiche les informations détaillées d’un Pokémon.
+   - Données incluent les statistiques, types, et résistances.
+   - Animation 3D sur l'image du Pokémon pour un effet visuel attractif.
+
+3. **PokemonService** : Service centralisant les appels API pour récupérer les données des Pokémon.
+
+### Améliorations de l'UI/UX et Accessibilité
+
+- **Effet de chargement** : Ajout d'un spinner pour informer l’utilisateur lorsque les données sont en cours de chargement.
+- **Effets 3D** : Application d’effets de transformation 3D sur les images des Pokémon pour un rendu visuel dynamique.
+- **Styles CSS Accessibles** : Améliorations de la visibilité des éléments interactifs et ajout de styles de focus pour la navigation au clavier.
+
+## Tests et Développement
+
+- **Tests Unitaires** : Exécution via [Karma](https://karma-runner.github.io).
+  ```bash
+  ng test
+  ```
+- **Tests End-to-End** : Peut être exécuté avec un outil de tests end-to-end. Ajoutez un package de tests end-to-end pour utiliser cette fonctionnalité.
+  ```bash
+  ng e2e
+  ```
+
+## Ressources Supplémentaires
+
+- Pour plus d'informations sur l'Angular CLI, consultez la [documentation officielle Angular CLI](https://angular.dev/tools/cli).
+- API utilisée pour les données : [PokeBuild API](https://pokebuildapi.fr/).
