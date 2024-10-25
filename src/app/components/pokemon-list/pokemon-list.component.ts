@@ -12,10 +12,10 @@ import { Pokemon } from '../../interface/pokemon';  // Import de l'interface
   templateUrl: './pokemon-list.component.html',
   styleUrl: './pokemon-list.component.css'
 })
-
 export class PokemonListComponent implements OnInit {
   pokemons: Pokemon[] = [];  // Utilisation de l'interface
   searchTerm: string = '';
+  isLoading: boolean = true;  // Flag pour indiquer que le chargement est en cours
 
   constructor(private pokemonService: PokemonService) {}
 
@@ -25,7 +25,8 @@ export class PokemonListComponent implements OnInit {
         ...pokemon,
         imageUrl: pokemon.image  // Définir imageUrl comme étant égale à image
       }));
-    });    
+      this.isLoading = false;  // Arrêter le spinner après le chargement
+    });
   }
 
   // Fonction pour filtrer les Pokémon selon le terme de recherche
