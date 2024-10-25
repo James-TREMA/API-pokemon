@@ -1,3 +1,5 @@
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { bootstrapSearch } from '@ng-icons/bootstrap-icons';
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import { CommonModule } from '@angular/common';
@@ -8,12 +10,15 @@ import { Pokemon } from '../../interface/pokemon';  // Import de l'interface
 @Component({
   selector: 'app-pokemon-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, FormsModule],
+  imports: [CommonModule, RouterLink, FormsModule, NgIconComponent],
   templateUrl: './pokemon-list.component.html',
-  styleUrl: './pokemon-list.component.css'
+  styleUrl: './pokemon-list.component.css',
+  providers: [provideIcons({ bootstrapSearch })],
 })
+
 export class PokemonListComponent implements OnInit {
   pokemons: Pokemon[] = [];  // Utilisation de l'interface
+  bootstrapSearch = bootstrapSearch;
   searchTerm: string = '';
   isLoading: boolean = true;  // Flag pour indiquer que le chargement est en cours
 
